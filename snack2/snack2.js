@@ -1,24 +1,24 @@
 // 🏆 Snack 2
 // Crea la funzione lanciaDado() che restituisce una Promise che, dopo 3 secondi, genera un numero casuale tra 1 e 6. Tuttavia, nel 20% dei casi, il dado si "incastra" e la Promise va in reject.
 
-// function lanciaDado(){
-//     return new Promise ((resolve, reject) => {
-//         setTimeout (() => {
-//             const incastrato = Math.floor(Math.random()* 10) + 1
-//             if (incastrato <= 2){
-//                 reject("NOOOO, il dado si è incastrato")
-//             }else{
-//                 const risultato = Math.floor(Math.random()* 6) + 1
-//                 resolve(`E' uscito il numero ${risultato}`)
-//             }
-//         }, 3000)
-//     }
-// )
-// }
+function lanciaDado(){
+    return new Promise ((resolve, reject) => {
+        setTimeout (() => {
+            const incastrato = Math.floor(Math.random()* 10) + 1
+            if (incastrato <= 2){
+                reject("NOOOO, il dado si è incastrato")
+            }else{
+                const risultato = Math.floor(Math.random()* 6) + 1
+                resolve(`E' uscito il numero ${risultato}`)
+            }
+        }, 3000)
+    }
+)
+}
 
-// lanciaDado()
-// .then(result => console.log(result))
-// .catch(error => console.error(error))
+lanciaDado()
+.then(result => console.log(result))
+.catch(error => console.error(error))
 
 
 
